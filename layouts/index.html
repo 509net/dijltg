@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>509  - DID I JUST LOSE THE GAME?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Did I just lose the Game?</h1>
+    </header>
+    <div id="random-text"></div>
+    <button id="reload-button">Play Again</button>
+
+    <footer>
+        <p>A dumb but fun site by beaches & 509 Network</p>
+        <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p> 
+        <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game.</p>
+
+    </footer>
+    
+    <script>
+        const messages = [
+            {{- range $index, $msg := site.Data.messages.messages -}}
+                {{- if $index }},{{ end }}
+                {{- $escaped := replace $msg "\"" "\\\"" | safeHTML }}
+                "{{ $escaped }}"
+            {{- end -}}
+        ];
+
+        function showRandomText() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("random-text").innerHTML = messages[randomIndex];
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            showRandomText();
+            document.getElementById("reload-button").addEventListener("click", showRandomText);
+        });
+    </script>
+</body>
+</html>
