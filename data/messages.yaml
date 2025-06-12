@@ -18,5 +18,5 @@ messages:
   - "yeppers!!"
   - "Rest assured, you have lost the game."
   - "Yes, yes you did."
-  - "<span id='four'>404</span><p>JUST KIDDING! you definitely lost the game</p><p id='tinyText>caption, today is not your lucky day.</p>"
-  - "It has been approximately 0 seconds since you lost the game."
+  - "<span id='four'>404</span><p>JUST KIDDING! you definitely lost the game</p><p id='tinyText'>caption, today is not your lucky day.</p>"
+  - "It has been approximately <span id='game-seconds'>0</span> seconds since you lost the game."

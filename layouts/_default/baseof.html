@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body data-theme="light">
+    {{ block "header" . }}
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{ end }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+  <footer>
+    <p>A dumb but fun site by <a href="https://www.techneti.us/socials.html">beaches</a> & 509 Network</p>
+    <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p> 
+    <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game ;)</p>
+
+  </footer>
+    
+</body>
+</html>
