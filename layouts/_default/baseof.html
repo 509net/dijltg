@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+    <title>509 - {{ block "title" . }}{{ .Title }}{{ end }}</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,27 @@
         {{ block "main" . }}{{ end }}
     </main>
 
-  <footer>
+<footer id="site-footer">
+  <div class="footer-about">
     <p>A dumb but fun site by <a href="https://www.techneti.us/socials.html">beaches</a> & 509 Network</p>
-    <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p> 
-    <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game ;)</p>
+    <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p>
+  </div>
 
-  </footer>
+  <div class="footer-copy">
+    <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game ;)</p>
+  </div>
+
+  <div class="footer-links">
+    <ul>
+      <li><a href="https://509network.com" target="_blank">509 Network</a></li>
+      <li><a href="https://nashfinecarpentry.com" target="_blank">Nash Fine Carpentry</a></li>
+      <li><a href="https://sharp.509.network" target="_blank">509 Sharpening</a></li>
+      <li><a href="https://mirror.509.network" target="_blank">Software Mirror</a></li>
+    </ul>
+  </div>
+
+
+</footer>
     
 </body>
 </html>

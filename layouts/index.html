@@ -16,12 +16,28 @@
     <div id="random-text"></div>
     <button id="reload-button">Play Again?</button>
 
-    <footer>
-        <p>A dumb but fun site by <a href="https://www.techneti.us/socials.html">beaches</a> & 509 Network</p>
-        <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p> 
-        <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game.</p>
+<footer id="site-footer">
+  <div class="footer-about">
+    <p>A dumb but fun site by <a href="https://www.techneti.us/socials.html">beaches</a> & 509 Network</p>
+    <p>If you would like more info about <a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">THE GAME</a></p>
+  </div>
 
-    </footer>
+  <div class="footer-copy">
+    <p id="tinyText">&copy; {{ now.Year }} 509 Network LLC — You just lost the Game ;)</p>
+  </div>
+
+  <div class="footer-links">
+    <ul>
+      <li><a href="https://509network.com" target="_blank">509 Network</a></li>
+      <li><a href="https://nashfinecarpentry.com" target="_blank">Nash Fine Carpentry</a></li>
+      <li><a href="https://sharp.509.network" target="_blank">509 Sharpening</a></li>
+      <li><a href="https://mirror.509.network" target="_blank">Software Mirror</a></li>
+    </ul>
+  </div>
+
+
+</footer>
+
     
     <script>
         const messages = [
@@ -33,8 +49,18 @@
         ];
 
         function showRandomText() {
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById("random-text").innerHTML = messages[randomIndex];
+          const randomIndex = Math.floor(Math.random() * messages.length);
+          document.getElementById("random-text").innerHTML = messages[randomIndex];
+
+          // If the selected message includes the #game-seconds span, start the counter
+          const gameSpan = document.getElementById("game-seconds");
+          if (gameSpan) {
+            let seconds = 0;
+            setInterval(() => {
+              seconds++;
+              gameSpan.textContent = seconds;
+            }, 1000);
+          }
         }
 
         document.addEventListener("DOMContentLoaded", function () {
