@@ -125,14 +125,71 @@ footer {
     background-color: #555;
 }
 
-#tinyText{
-    font-size:8pt;
+#tinyText {
+  font-size: 0.75em;
+  color: #777;
+  margin-top: 0.25em;
 }
 
 #four {
     font-size:72pt;
 }
 
+#bold {
+  font-weight: bold;
+  color: #d62828; /* fun punchy red */
+}
+
+.boom {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff006e;
+}
+
+.status {
+  font-weight: bold;
+  color: #e63946;
+  text-transform: uppercase;
+}
+
+.shame {
+  font-size: 1.5em;
+  color: #6a040f;
+  font-style: italic;
+}
+
+.emoji {
+  font-size: 1.25em;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+strong {
+  font-weight: bold;
+  color: #5f0f40;
+}
+
+#trap-card {
+  background-color: #ffde59;
+  padding: 0.1em 0.4em;
+  border: 1px solid #ffa500;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #b30000;
+}
+
+marquee {
+  color: #ffffff;
+  background-color: #ff0000;
+  font-weight: bold;
+  padding: 0.25em;
+  border-radius: 4px;
+}
 .section-divider {
     width: 80%;
     height: 2px;
